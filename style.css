@@ -1,0 +1,38 @@
+body {
+  margin: 0px auto;
+  background-color: black;
+  color: white;
+  font-family: 'Roboto Mono';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 300px;
+  min-height: 90vh;
+}
+
+a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  font-size: 20px;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+#main {
+  text-align: center;
+  padding: 0px 20px;
+  margin: 0px auto 0vh;
+}
+
+#menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  display: inline-block;
+  padding: 4px 12px 16px;
+}
