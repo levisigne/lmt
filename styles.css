@@ -30,13 +30,13 @@ a:hover {
 #menu {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 16px;
 }
 
 .button {
   display: inline-block;
   padding: 10px 16px;
   border-radius: 2px;
-  border: 2px solid #111111;
+  border: 1px solid white;
   vertical-align: middle;
 }
