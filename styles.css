@@ -63,7 +63,7 @@ a:hover {
   background-color: white;
 }
 
-@keyframes glow{
+/* @keyframes glow{
   from{text-shadow:0px 0px 1px #fff}
   to{text-shadow:0px 0px 2px #fff}
-}
+} */
