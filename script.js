@@ -22,9 +22,9 @@ function handleResponse(action) {
         } else if (action === 'contact') {
             newMessage = "Interested? Contact me on Instagram or over text!";
         } else if (action === 'book') {
-            newMessage = "Great! I can be visited in clinic at Massage Now, or I can come to your home at your convenience.";
+            newMessage = "Great! I can be visited in clinic at Massage Now, or I can visit to your home at your convenience.";
         } else if (action === 'massageNow') {
-            newMessage = "I can be booked at Massage Now (3-7pm on M, W, Th, F).";
+            newMessage = "I can be booked at Massage Now from 3-7pm on Mon, Wed, Thu, and Fri.";
         }
 
         chatbotMessage.textContent = newMessage;
