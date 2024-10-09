@@ -1,35 +1,38 @@
 <html>
-  
-  <head>
+
+<head>
     <title>levi.lmt</title>
     <meta name="theme-color" content="#000000">
     <link rel="stylesheet" href="./styles.css">
+  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-
-  </head>
-  
-  <body>
-    <div id="main">
-      
-      <div id="header">
-        <h2 id="name">Levi Brown</h2>
-        <h3 id="name-title">Student Massage Therapist</h3> 
-      </div>
-      
-      <div id="menu">
-        <a href="https://g.co/kgs/tbjM74G" class="button">Call <i>Massage Now</i> <br> and request for Levi <br><div style="font-size: 12px; margin-top: 5px;">Thu 3-7p | Sat 11-3p</div></a>
-        <a href="https://venmo.com/lvsbrwn" class="button">Venmo</a>
-        <a href="https://cash.app/$lvsbrwn" class="button">Cashapp</a>
-        <a href="https://www.instagram.com/levi.lmt" class="button">Instagram</a>
-        <a href="sms:+19073174269?&body=Hi Levi, I'm interested in getting a massage from you" class="button">Text me</a>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
  
-
-      </div>
+</head>
+   
+<body>
+  <div id="chatbot">
+    <div id="levi">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png?20170328184010">
+      <h1>Levi Brown, LMT</h1> 
+    </div> 
+    <div id="chatbotMessageBubble">
+      <div id="chatbotMessage" class="fadeable">Hello! How may I help you?</div>
     </div>
-  </body>
+    <div id="responseButtons" class="fadeable">
+      <a href="#" class="button-link" onclick="handleResponse('book')">Book an appointment</a>
+      <a href="#" class="button-link" onclick="handleResponse('contact')">Contact</a>
+      <a href="#" class="button-link" onclick="handleResponse('tip')">Tip</a>
+      <a href="https://www.instagram.com/levi.lmt/" class="button-link" target="_blank">Learn more</a>
+        
+    </div>                             
+    <script src="script.js"></script>
+  </div>
+  
+<script src="script.js"></script>
+</body> 
   
 </html>
