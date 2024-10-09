@@ -22,7 +22,9 @@ function handleResponse(action) {
         } else if (action === 'contact') {
             newMessage = "Interested? Contact me on Instagram or over text!";
         } else if (action === 'book') {
-            newMessage = "Great! I can be booked at Massage Now (3-7pm on M, W, Th, F), or I can come to your home at your convenience.";
+            newMessage = "Great! I can be visited in clinic at Massage Now, or I can come to your home at your convenience.";
+        } else if (action === 'massageNow') {
+            newMessage = "I can be booked at Massage Now (3-7pm on M, W, Th, F).";
         }
 
         chatbotMessage.textContent = newMessage;
@@ -33,13 +35,18 @@ function handleResponse(action) {
 
         if (action === 'book') {
             responseButtons.innerHTML = `
-                <a href="https://g.co/kgs/tbjM74G" target="_blank" class="button-link" onclick="handleResponse('massageNow')">Massage Now</a>
+                <a class="button-link" onclick="handleResponse('massageNow')">Massage Now</a>
                 <a href="#" class="button-link" onclick="handleResponse('contact')">House call</a>
+            `;
+        } else if (action === 'massageNow') {
+            responseButtons.innerHTML = `
+                <a href="https://g.co/kgs/HFNNsYT" class="button-link" onclick="handleResponse('callToBook')" target="_blank">Call to book</a>
+                <a href="https://massagenowak.com/treatment/swedish/" class="button-link" onclick="handleResponse('bookOnline')" target="_blank">Book online</a>
             `;
         } else if (action === 'contact') {
             responseButtons.innerHTML = `
-                <a href="https://www.instagram.com/levi.lmt/" class="button-link" onclick="handleResponse('email')" target="_blank">Instagram</a>
-                <a href="sms:+19073174269?&body=Hi Levi, I'm interested in getting a massage from you" class="button-link" onclick="handleResponse('phone')">Text</a>
+                <a href="https://www.instagram.com/levi.lmt/" class="button-link" onclick="handleResponse('instagram')" target="_blank">Instagram</a>
+                <a href="sms:+19073174269?&body=Hi Levi, I'm interested in getting a massage from you" class="button-link" onclick="handleResponse('text')">Text</a>
             `;
         } else if (action === 'tip') {
             responseButtons.innerHTML = `
