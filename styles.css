@@ -10,7 +10,7 @@ body {
 }
 
 #chatbot {
-  background-color: #111;
+  background-color: #141414;
   padding: 15vh 40px 20px;
   min-height: 200px;
   display: flex;
@@ -34,7 +34,7 @@ body {
 }
 
 #levi h1 {
-  font-size: 26px;
+  font-size: 20px;
   font-weight: 500;
   text-align: center;
   padding: 0;
@@ -43,14 +43,16 @@ body {
 
 #levi img {
   display: block;
-  width: 80px;
+  width: 60px;
   border-radius: 200px;
   align: center;
   border: 2px white solid;
 }
 
 #chatbotMessage {
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #754C24;
 }
 
 #chatbotMessageBubble {
@@ -61,13 +63,13 @@ body {
   background-color: white;
   color: black;
   padding: 20px 30px; 
-  margin: 0px 0px 30px;
+  margin: 0px 0px 6px;
   border-radius: 30px;
   text-align: center;
   max-width: 300px;
   width: 100%;
   height: 70px;
-  box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.25);
 }
 
 .fadeable {
@@ -91,7 +93,7 @@ body {
     display: inline-block;
     padding: 10px 20px;
     background-color: none;
-    border: 2px white solid;
+    border: 2px #C69C6D solid;
     color: white;
     text-decoration: none;
     border-radius: 100px;
@@ -100,6 +102,7 @@ body {
     line-height: 1.2; /* Ensures the text stays within the button's height */
     vertical-align: middle; /* Vertically aligns inline-block elements */
     transition: background-color 0.2s ease;
+    font-size: 17px;
 }
 
 .button-link:hover {
