@@ -83,13 +83,17 @@ body {
     opacity: 0;
 }
 
+#responses {
+    min-height: 200px;
+    
+}
+
 #responseButtons {
     text-align: center; /* Center-align the content */
     display: flex; /* Use flexbox for consistent wrapping */
     flex-wrap: wrap; /* Allow the buttons to wrap */
     justify-content: center; /* Center the wrapped content */
     gap: 10px; /* Add some space between the buttons */
-    margin: 0px 0px 100px;
 }
 
 .button-link {
