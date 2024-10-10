@@ -1,20 +1,42 @@
 // Array to keep track of history
 const historyStack = [];
 
+// Variable to store the initial response buttons
+const initialResponseButtons = `
+    <a href="#" class="button-link" onclick="handleResponse('book')">Book an appointment</a>
+    <a href="#" class="button-link" onclick="handleResponse('contact')">Contact</a>
+    <a href="#" class="button-link" onclick="handleResponse('tip')">Tip</a>
+    <a href="https://www.instagram.com/levi.lmt/" class="button-link" target="_blank">@levi.lmt</a>
+`;
+
+// Function to initialize the chatbot
+function initChatbot() {
+    const chatbotMessage = document.getElementById("chatbotMessage");
+    const responseButtons = document.getElementById("responseButtons");
+
+    // Set the initial chatbot message
+    chatbotMessage.textContent = "Hello! How may I help you?";
+
+    // Set the initial response buttons using the variable
+    responseButtons.innerHTML = initialResponseButtons;
+}
+
 function handleResponse(action) {
+    const chatbotMessage = document.getElementById("chatbotMessage");
+    const responseButtons = document.getElementById("responseButtons");
+
     // Save the current state to the history stack
-    const currentMessage = document.getElementById("chatbotMessage").textContent;
-    const currentButtons = document.getElementById("responseButtons").innerHTML;
+    const currentMessage = chatbotMessage.textContent;
+    const currentButtons = responseButtons.innerHTML;
     historyStack.push({ message: currentMessage, buttons: currentButtons });
 
     // Fade out current elements
-    document.getElementById("chatbotMessage").classList.add("fade-out");
-    document.getElementById("responseButtons").classList.add("fade-out");
+    chatbotMessage.classList.add("fade-out");
+    responseButtons.classList.add("fade-out");
 
     // Wait for the fade-out to complete before updating the content
-    document.getElementById("responseButtons").addEventListener("transitionend", function() {
+    responseButtons.addEventListener("transitionend", function() {
         // Update the chatbot message based on the action
-        const chatbotMessage = document.getElementById("chatbotMessage");
         let newMessage = "Thanks! What would you like to do next?";
 
         if (action === 'tip') {
@@ -24,13 +46,12 @@ function handleResponse(action) {
         } else if (action === 'book') {
             newMessage = "Great! I can be visited in clinic at Massage Now, or I can visit to your home at your convenience.";
         } else if (action === 'massageNow') {
-            newMessage = "I can be booked at Massage Now from 3-7pm on Mon, Wed, Thu, and Fri.";
+            newMessage = "I can be booked at Massage Now 3-7pm on Mon, Wed, Thu, and Fri.";
         }
 
         chatbotMessage.textContent = newMessage;
 
         // Update the response buttons to show new options
-        const responseButtons = document.getElementById("responseButtons");
         responseButtons.innerHTML = "";
 
         if (action === 'book') {
@@ -72,43 +93,36 @@ function handleResponse(action) {
 }
 
 function resetChatbot() {
+    const chatbotMessage = document.getElementById("chatbotMessage");
+    const responseButtons = document.getElementById("responseButtons");
+
     // Clear the history stack
     historyStack.length = 0;
 
     // Fade out current elements
-    const chatbotMessage = document.getElementById("chatbotMessage");
-    const responseButtons = document.getElementById("responseButtons");
-
     chatbotMessage.classList.add("fade-out");
     responseButtons.classList.add("fade-out");
 
     // Wait for the fade-out to complete before resetting the content
     responseButtons.addEventListener("transitionend", function() {
-        // Set the initial chatbot message
-        chatbotMessage.textContent = "Hello! How may I help you?";
-
-        // Set the initial response buttons
-        responseButtons.innerHTML = `
-            <a href="#" class="button-link" onclick="handleResponse('tip')">I want to tip you</a>
-            <a href="#" class="button-link" onclick="handleResponse('contact')">I want to contact you</a>
-            <a href="#" class="button-link" onclick="handleResponse('book')">I want to book with you</a>
-        `;
+        // Initialize the chatbot
+        initChatbot();
 
         // Fade in the reset content
         chatbotMessage.classList.remove("fade-out");
         responseButtons.classList.remove("fade-out");
-    }, { once: true }); // Use { once: true } to remove the event listener after it's executed once
+    }, { once: true });
 }
 
 function goBack() {
     if (historyStack.length > 0) {
+        const chatbotMessage = document.getElementById("chatbotMessage");
+        const responseButtons = document.getElementById("responseButtons");
+
         // Get the last state from the history stack
         const lastState = historyStack.pop();
 
         // Fade out current elements
-        const chatbotMessage = document.getElementById("chatbotMessage");
-        const responseButtons = document.getElementById("responseButtons");
-
         chatbotMessage.classList.add("fade-out");
         responseButtons.classList.add("fade-out");
 
@@ -124,3 +138,6 @@ function goBack() {
         }, { once: true });
     }
 }
+
+// Call initChatbot when the page loads
+window.onload = initChatbot;
