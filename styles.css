@@ -11,7 +11,7 @@ body {
 
 #chatbot {
   background-color: #141414;
-  padding: 15vh 30px 20px;
+  padding: 30px;
   min-height: 200px;
   display: flex;
   flex-direction: column;
@@ -21,7 +21,7 @@ body {
   margin: 0px auto;
   gap: 20px;
   align-items: center;
-/*   justify-content: space-between; */
+  justify-content: center;
 }
 
 #levi {
@@ -67,7 +67,7 @@ body {
   margin: 0px 0px 6px;
   border-radius: 30px;
   text-align: center;
-  max-width: 100%;
+  max-width: 400px;
   width: 100%;
   box-sizing: border-box;
   min-height: 120px;
@@ -89,6 +89,7 @@ body {
     flex-wrap: wrap; /* Allow the buttons to wrap */
     justify-content: center; /* Center the wrapped content */
     gap: 10px; /* Add some space between the buttons */
+    margin: 0px 0px 100px;
 }
 
 .button-link {
