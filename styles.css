@@ -11,7 +11,7 @@ body {
 
 #chatbot {
   background-color: #111;
-  padding: 10vh 40px 20px;
+  padding: 15vh 40px 20px;
   min-height: 200px;
   display: flex;
   flex-direction: column;
@@ -21,6 +21,7 @@ body {
   margin: 0px auto;
   gap: 20px;
   align-items: center;
+/*   justify-content: space-between; */
 }
 
 #levi {
@@ -33,7 +34,7 @@ body {
 }
 
 #levi h1 {
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 500;
   text-align: center;
   padding: 0;
@@ -42,14 +43,14 @@ body {
 
 #levi img {
   display: block;
-  width: 100px;
+  width: 80px;
   border-radius: 200px;
   align: center;
   border: 2px white solid;
 }
 
 #chatbotMessage {
-  font-size: 1p6x;
+  font-size: 16px;
 }
 
 #chatbotMessageBubble {
@@ -60,11 +61,13 @@ body {
   background-color: white;
   color: black;
   padding: 20px 30px; 
+  margin: 0px 0px 30px;
   border-radius: 30px;
   text-align: center;
   max-width: 300px;
   width: 100%;
   height: 70px;
+  box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.5);
 }
 
 .fadeable {
