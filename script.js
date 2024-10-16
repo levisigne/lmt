@@ -44,9 +44,9 @@ function handleResponse(action) {
         } else if (action === 'contact') {
             newMessage = "Interested? Contact me on Instagram or over text!";
         } else if (action === 'book') {
-            newMessage = "Great! I can be visited in clinic at Massage Now, or I can come to you for a house call.";
+            newMessage = "Great! I can be visited in clinic at Massage Now ($120), or I can come to you for a house call ($100).";
         } else if (action === 'massageNow') {
-            newMessage = "I can be booked at Massage Now 3-7pm on Mon, Wed, Thu, and Fri.";
+            newMessage = "I can be booked at Massage Now 3-7pm on Mon, Wed, Thu, and Fri. $120 for 60 min.";
         }
 
         chatbotMessage.textContent = newMessage;
