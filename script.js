@@ -15,7 +15,7 @@ function initChatbot() {
     const responseButtons = document.getElementById("responseButtons");
 
     // Set the initial chatbot message
-    chatbotMessage.textContent = "Hello! How may I help you?";
+    chatbotMessage.textContent = "Hello, how may I help you?";
 
     // Set the initial response buttons using the variable
     responseButtons.innerHTML = initialResponseButtons;
@@ -40,11 +40,11 @@ function handleResponse(action) {
         let newMessage = "Thanks! What would you like to do next?";
 
         if (action === 'tip') {
-            newMessage = "Thank you so much! How would you like to tip?";
+            newMessage = "Thanks! How would you like to tip?";
         } else if (action === 'contact') {
-            newMessage = "Interested? Contact me on Instagram or over text!";
+            newMessage = "Interested? Contact me on Instagram or over text.";
         } else if (action === 'book') {
-            newMessage = "Great! I can be visited in clinic at Massage Now ($120), or I can come to you for a house call ($100).";
+            newMessage = "I can be visited in clinic at Massage Now ($120), or I can come to you for a house call ($100).";
         } else if (action === 'massageNow') {
             newMessage = "I can be booked at Massage Now 3-7pm on Mon, Wed, Thu, and Fri. $120 for 60 min.";
         }
