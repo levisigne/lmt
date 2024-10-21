@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: black;
+    background-color: #111;
     height: 95vh;
     display: flex;
     flex-direction: column;
@@ -54,10 +54,10 @@ body {
 
 #levi img {
   display: block;
-  width: 100px;
+  width: 80px;
   border-radius: 200px;
   align: center;
-  border: 2px white solid;
+  border: 3px #fff solid;
 }
 
 #chatbotMessage {
@@ -74,7 +74,7 @@ body {
 /*   flex-direction: column; */
   background-color: white;
   color: black;
-  padding: 20px 30px; 
+  padding: 20px 24px; 
   margin: 0px 0px 6px;
   border-radius: 20px;
   text-align: center;
@@ -95,7 +95,7 @@ body {
 }
 
 #responses {
-    min-height: 250px;
+    min-height: 200px;
 }
 
 #responseButtons {
