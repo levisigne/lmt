@@ -3,7 +3,7 @@ const historyStack = [];
 
 // Variable to store the initial response buttons
 const initialResponseButtons = `
-    <a href="#" class="button-link" onclick="handleResponse('book')">Book an appointment</a>
+    <a href="#" class="button-link" onclick="handleResponse('book')">Book appointment</a>
     <a href="#" class="button-link" onclick="handleResponse('contact')">Contact</a>
     <a href="#" class="button-link" onclick="handleResponse('tip')">Tip</a>
     <a href="https://www.instagram.com/levi.lmt/" class="button-link" target="_blank">@levi.lmt</a>
