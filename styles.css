@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #141414;
+    background-color: black;
     height: 95vh;
     display: flex;
     flex-direction: column;
@@ -30,7 +30,7 @@ body {
   justify-content: center;
   color: white;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
 }
 
 #levi h1 {
@@ -39,21 +39,22 @@ body {
   text-align: center;
   padding: 0;
   margin: 0;
+  font-weight: 400;
 }
 
 #levi img {
   display: block;
-  width: 60px;
+  width: 100px;
   border-radius: 200px;
   align: center;
   border: 2px white solid;
 }
 
 #chatbotMessage {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
-  color: #754C24;
-  line-height: 24px;
+  color: #111;
+  line-height: 22px;
 }
 
 #chatbotMessageBubble {
@@ -65,7 +66,7 @@ body {
   color: black;
   padding: 20px 30px; 
   margin: 0px 0px 6px;
-  border-radius: 30px;
+  border-radius: 20px;
   text-align: center;
   max-width: 400px;
   width: 100%;
@@ -93,13 +94,17 @@ body {
     flex-wrap: wrap; /* Allow the buttons to wrap */
     justify-content: center; /* Center the wrapped content */
     gap: 10px; /* Add some space between the buttons */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    font-weight: 500;
 }
 
 .button-link {
     display: inline-block;
     padding: 10px 20px;
-    background-color: none;
-    border: 2px #C69C6D solid;
+    background-color: #111;
+    border: 2px white solid;
     color: white;
     text-decoration: none;
     border-radius: 100px;
@@ -108,11 +113,10 @@ body {
     line-height: 1.2; /* Ensures the text stays within the button's height */
     vertical-align: middle; /* Vertically aligns inline-block elements */
     transition: background-color 0.2s ease;
-    font-size: 16px;
 }
 
 .button-link:hover {
-    background-color: #222;
+    background-color: #333;
 }
 
 #back {
