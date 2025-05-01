@@ -3,9 +3,9 @@ const historyStack = [];
 
 // Variable to store the initial response buttons
 const initialResponseButtons = `
+    <a href="#" class="button-link" onclick="handleResponse('tip')">Send a Tip</a>
     <a href="#" class="button-link" onclick="handleResponse('book')">Book appointment</a>
     <a href="#" class="button-link" onclick="handleResponse('contact')">Contact</a>
-    <a href="#" class="button-link" onclick="handleResponse('tip')">Tip</a>
     <a href="https://www.instagram.com/levi.lmt/" class="button-link" target="_blank">@levi.lmt</a>
 `;
 
@@ -44,9 +44,9 @@ function handleResponse(action) {
         } else if (action === 'contact') {
             newMessage = "Interested? Send me a message on Instagram or text";
         } else if (action === 'book') {
-            newMessage = "Visit me in clinic at Massage Now ($120), or request a house call ($80)";
+            newMessage = "Book today! I am at Massage Now 3-7pm on M, W, Th, F.";
         } else if (action === 'massageNow') {
-            newMessage = "I may be booked at Massage Now 3-7pm on M, W, Th, F — $120 for 60 min.";
+            newMessage = "$120 for 60 min / $175 for 90 min.";
         }
 
         chatbotMessage.textContent = newMessage;
@@ -56,8 +56,8 @@ function handleResponse(action) {
 
         if (action === 'book') {
             responseButtons.innerHTML = `
-                <a class="button-link" onclick="handleResponse('massageNow')">Massage Now</a>
-                <a href="#" class="button-link" onclick="handleResponse('contact')">House call</a>
+                <a class="button-link" onclick="handleResponse('massageNow')">Book Now</a>
+                
             `;
         } else if (action === 'massageNow') {
             responseButtons.innerHTML = `
