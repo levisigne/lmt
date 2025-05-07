@@ -62,7 +62,7 @@ function handleResponse(action) {
         } else if (action === 'massageNow') {
             responseButtons.innerHTML = `
                 <a href="https://g.co/kgs/HFNNsYT" class="button-link" onclick="handleResponse('callToBook')" target="_blank">Call to book</a>
-                <a href="https://massagenowak.com/treatment/swedish/" class="button-link" onclick="handleResponse('bookOnline')" target="_blank">Book online</a>
+                <a href="https://massagenowak.com/levi/" class="button-link" onclick="handleResponse('bookOnline')" target="_blank">Book online</a>
             `;
         } else if (action === 'contact') {
             responseButtons.innerHTML = `
