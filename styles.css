@@ -1,137 +1,79 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(300deg,rgba(0, 33, 36, 1) 0%, rgba(0, 51, 59, 1) 100%);
+    /* background: linear-gradient(300deg,rgb(1, 7, 7) 0%, rgb(9, 44, 49) 100%); */
+    background-color: white;
     height: 100vh;
     display: flex;
     flex-direction: column;
     font-family: "Lexend";
     justify-content: flex-end; /* Aligns the child elements to the bottom */
+    color: rgb(0, 0, 0);
 }
 
-#chatbot {
-  /* background-color: #002124; */
-  padding: 30px;
-  min-height: 200px;
+/* Menu styling - using flexbox */
+.menu {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  width: 100vw;
-  box-sizing: border-box;
-  margin: 0px auto;
-  gap: 20px;
   align-items: center;
   justify-content: center;
-}
-
-#levi {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: white;
-  align-items: center;
-  gap: 15px;
-}
-
-#levi h1 {
-  font-size: 20px;
-  font-weight: 500;
-  text-align: center;
-  padding: 0;
-  margin: 0;
-  font-weight: 400;
-}
-
-#levi span {
-/*   text-transform: uppercase; */
-  font-size: 12px;
-/*   letter-spacing: 1px; */
-}
-
-#levi img {
-  display: block;
-  width: 80px;
-  border-radius: 200px;
-  align-content: center;
-  border: 3px #fff solid;
-  /* box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.25); */
-}
-
-#chatbotMessage {
-  font-size: 17px;
-  font-weight: 500;
-  color: #111;
-  line-height: 22px;
-}
-
-#chatbotMessageBubble {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-/*   flex-direction: column; */
-  background-color: white;
-  color: black;
-  padding: 20px 24px; 
-  margin: 0px 0px 6px;
-  border-radius: 20px;
-  text-align: center;
-  max-width: 400px;
   width: 100%;
-  box-sizing: border-box;
-  min-height: 120px;
-  /* box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.25); */
+  height: 100%;
 }
 
-.fadeable {
-    transition: opacity 0.2s ease-in-out;
-    opacity: 1;
+.menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
 }
 
-.fade-out {
-    opacity: 0;
-}
-
-#responses {
-    min-height: 200px;
-}
-
-#responseButtons {
-    text-align: center; /* Center-align the content */
-    display: flex; /* Use flexbox for consistent wrapping */
-    flex-wrap: wrap; /* Allow the buttons to wrap */
-    justify-content: center; /* Center the wrapped content */
-    gap: 10px; /* Add some space between the buttons */
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 12px;
-    font-weight: 500;
-}
-
-.button-link {
-    display: inline-block;
-    padding: 10px 16px;
-    background-color: #111;
-    border: 2px white solid;
-    color: white;
+.menu a {
+    font-family: 'Lexend', sans-serif;
+    font-size: 14px;
+    border: 2px solid rgb(240, 233, 233);
+    border-radius: 1px;
     text-decoration: none;
-    border-radius: 100px;
-    cursor: pointer;
-    text-align: center;
-    line-height: 1.2; /* Ensures the text stays within the button's height */
-    vertical-align: middle; /* Vertically aligns inline-block elements */
-    transition: background-color 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
+    transition: all .7s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 40px;
 }
 
-.button-link:hover {
-    background-color: #333;
+.menu a:hover {
+    background-color: #fff;
+    color: #000;
+    border-radius: 40px;
 }
 
-#back {
-    background-color: #000;
-    border-color: #222;
-    justify-self: center;
-}
-
-#responseButtons {
-    text-align: center; /* Center-align the content */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
